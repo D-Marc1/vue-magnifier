@@ -8,7 +8,7 @@ This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/r
 - Supports touch screens
 - Allows different files for large image and magnifying glass (e.g. thumbnail and high-resolution image)
 
-→ **[Demo](https://react-magnifier.samuelmeuli.com)**
+→ **[Demo](https://codesandbox.io/s/vue-magnifier-vc8kd0?file=/demo/App.vue)**
 
 <p style="text-align: center">
   <img src="https://github.com/samuelmeuli/react-magnifier/raw/master/.github/demo.gif" alt="Demo" style="width: 600px" />

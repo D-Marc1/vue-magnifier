@@ -8,6 +8,5 @@
 </template>
 
 <script setup lang="ts">
-// import VueMagnifier from 'vue-magnifier'
 import VueMagnifier from '../src/install'
 </script>
