@@ -32,7 +32,7 @@ Add the component to your Vue application:
 
 ```ts
 <script setup lang="ts">
-import VueMagnifier from 'vue-magnifier'
+import VueMagnifier from '@websitebeaver/vue-magnifier'
 </script>
 ```
 
