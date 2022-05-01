@@ -1,0 +1,21 @@
+.vue-magnifier__magnifier {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+.vue-magnifier__magnifying-glass {
+  position: absolute;
+  z-index: 1;
+  background: #fff no-repeat;
+  border: solid #ebebeb;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.vue-magnifier__magnifying-glass.vue-magnifier__circle {
+  border-radius: 50%;
+}
+.vue-magnifier__magnifying-glass.vue-magnifier__visible {
+  opacity: 1;
+}
