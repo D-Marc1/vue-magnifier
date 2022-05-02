@@ -11,7 +11,7 @@ This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/r
 → **[Demo](https://codesandbox.io/s/websitebeaver-vue-magnifier-d1bnuw?file=/demo/App.vue)**
 
 <p style="text-align: center">
-  <img src="https://github.com/samuelmeuli/react-magnifier/raw/master/.github/demo.gif" alt="Demo" style="width: 600px" />
+  <img src="https://github.com/WebsiteBeaver/vue-magnifier/blob/d8cdfa26b08348a223b54105faa9c9767f15798f/images/demo.gif" alt="Demo" style="width: 600px" />
 </p>
 
 ## Usage
