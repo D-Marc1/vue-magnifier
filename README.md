@@ -1,6 +1,6 @@
 # vue-magnifier
 
-This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/react-magnifier), which is the original version. Someone else made a Svelte version called [svelte-magnifier](https://github.com/supercoww/svelte-magnifier) as well.
+This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/react-magnifier), which is the original version. Someone else made a Svelte version, called [svelte-magnifier](https://github.com/supercoww/svelte-magnifier), as well.
 
 **Vue image zoom component**
 
