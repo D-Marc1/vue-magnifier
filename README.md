@@ -10,9 +10,9 @@ This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/r
 
 → **[Demo](https://githubbox.com/WebsiteBeaver/vue-magnifier)**
 
-<p style="text-align: center">
+<div style="text-align: center">
   <img src="https://raw.githubusercontent.com/WebsiteBeaver/vue-magnifier/d8cdfa26b08348a223b54105faa9c9767f15798f/images/demo.gif" alt="Demo" style="width: 600px" />
-</p>
+</div>
 
 ## Usage
 
@@ -64,7 +64,7 @@ Any other props will be passed down to the `<img>` element. This way, you can e.
 
 | Event            | Type          | Value | Description |
 | ---------------- | ------------- | ----- | ----------- |
-| `image:load`     | `Event`       | -     | On image load. |
+| `image:load`     | `Event`       | -     | On image load. Doesn't exist in React or Svelte version. |
 
 ## Custom styling
 
