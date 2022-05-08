@@ -1,6 +1,6 @@
 {
   "name": "@websitebeaver/vue-magnifier",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "./dist/vue-magnifier.umd.js",
   "module": "./dist/vue-magnifier.es.js",
   "exports": {
