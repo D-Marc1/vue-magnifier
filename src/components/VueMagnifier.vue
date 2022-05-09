@@ -26,24 +26,7 @@
     <div
       v-if="imgBounds && mgShow"
       :class="mgClasses"
-      :style="{
-        width: `${mgWidth}px`,
-        height: `${mgHeight}px`,
-        left: `calc(${relX * 100}% - ${mgWidth / 2}px + ${mgOffsetX}px -
-    ${mgBorderWidth}px)`,
-        top: `calc(${relY * 100}% - ${mgHeight / 2}px +
-    ${mgOffsetY}px - ${mgBorderWidth}px)`,
-        backgroundImage: `url(${zoomImgSrc || src})`,
-        backgroundPosition: `calc(${relX * 100}% + ${mgWidth / 2}px -
-    ${relX * mgWidth}px) calc(${relY * 100}% + ${mgHeight / 2}px - ${
-          relY * mgWidth
-        }px)`,
-        backgroundSize: `${zoomFactor * imgBounds.width}% ${
-          zoomFactor * imgBounds.height
-        }%`,
-        borderWidth: `${mgBorderWidth}px`,
-        backgroundColor: mgCornerBgColor,
-      }"
+      :style="magnifierStyles"
     />
   </div>
 </template>
@@ -126,6 +109,21 @@ const props = withDefaults(defineProps<Props>(), {
   mgCornerBgColor: '#fff',
 })
 
+const {
+  src,
+  zoomImgSrc,
+  zoomFactor,
+  mgWidth,
+  mgHeight,
+  mgBorderWidth,
+  mgShape,
+  mgMouseOffsetX,
+  mgMouseOffsetY,
+  mgTouchOffsetX,
+  mgTouchOffsetY,
+  mgCornerBgColor,
+} = props
+
 // const emit = defineEmits(['image:load'])
 
 const emit = defineEmits<{
@@ -133,21 +131,42 @@ const emit = defineEmits<{
 }>()
 
 const img = $ref<HTMLImageElement>()
+
 let imgBounds = $ref<DOMRect>()
 let showZoom = $ref(false)
 let mgOffsetX = $ref(0)
 let mgOffsetY = $ref(0)
 let relX = $ref(0)
 let relY = $ref(0)
+
 const mgClasses = computed(() => {
   let classes = 'vue-magnifier__magnifying-glass'
 
   if (showZoom) classes += ' vue-magnifier__visible'
 
-  if (props.mgShape === 'circle') classes += ' vue-magnifier__circle'
+  if (mgShape === 'circle') classes += ' vue-magnifier__circle'
 
   return classes
 })
+
+const magnifierStyles = computed(() => ({
+  width: `${mgWidth}px`,
+  height: `${mgHeight}px`,
+  left: `calc(${relX * 100}% - ${mgWidth / 2}px + ${mgOffsetX}px -
+${mgBorderWidth}px)`,
+  top: `calc(${relY * 100}% - ${mgHeight / 2}px +
+${mgOffsetY}px - ${mgBorderWidth}px)`,
+  backgroundImage: `url(${zoomImgSrc || src})`,
+  backgroundPosition: `calc(${relX * 100}% + ${mgWidth / 2}px -
+${relX * mgWidth}px) calc(${relY * 100}% + ${mgHeight / 2}px - ${
+    relY * mgWidth
+  }px)`,
+  backgroundSize: `${zoomFactor * imgBounds.width}% ${
+    zoomFactor * imgBounds.height
+  }%`,
+  borderWidth: `${mgBorderWidth}px`,
+  backgroundColor: mgCornerBgColor,
+}))
 
 const calcImgBounds = () => {
   if (img) {
@@ -166,7 +185,7 @@ const onMouseEnter = () => {
 }
 
 let onMouseMove = (e: MouseEvent) => {
-  const { mgMouseOffsetX, mgMouseOffsetY } = props
+  // const { mgMouseOffsetX, mgMouseOffsetY } = props
 
   if (imgBounds) {
     const target = e.target as HTMLElement
@@ -194,7 +213,7 @@ let onTouchMove = (e: TouchEvent) => {
 
   if (imgBounds) {
     const target = e.target as HTMLElement
-    const { mgTouchOffsetX, mgTouchOffsetY } = props
+    // const { mgTouchOffsetX, mgTouchOffsetY } = props
     const relXLocal =
       (e.targetTouches[0].clientX - imgBounds.left) / target.clientWidth
     const relYLocal =
