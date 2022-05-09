@@ -55,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/WebsiteBeaver/vue-magnifier/issues"
   },
-  "homepage": "https://github.com/WebsiteBeaver/vue-magnifier#readme"
+  "homepage": "https://github.com/WebsiteBeaver/vue-magnifier#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
