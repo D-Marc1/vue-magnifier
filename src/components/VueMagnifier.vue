@@ -23,11 +23,7 @@
       @touchend="onTouchEnd()"
     />
 
-    <div
-      v-if="imgBounds && mgShow"
-      :class="mgClasses"
-      :style="magnifierStyles"
-    />
+    <div v-if="imgBounds && mgShow" :class="mgClasses" :style="mgStyles" />
   </div>
 </template>
 
@@ -149,7 +145,7 @@ const mgClasses = computed(() => {
   return classes
 })
 
-const magnifierStyles = computed(() => ({
+const mgStyles = computed(() => ({
   width: `${mgWidth}px`,
   height: `${mgHeight}px`,
   left: `calc(${relX * 100}% - ${
