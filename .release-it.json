@@ -1,10 +1,4 @@
 {
-  "plugins": {
-    "@release-it/keep-a-changelog": {
-      "addVersionUrl": true,
-      "head": "master"
-    }
-  },
   "github": {
     "release": true
   }
