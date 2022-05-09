@@ -48,12 +48,12 @@
   "description": "This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/react-magnifier), which is the original version. Someone else made a Svelte version, called [svelte-magnifier](https://github.com/supercoww/svelte-magnifier), as well.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/D-Marc1/vue-magnifier.git"
+    "url": "git+https://github.com/WebsiteBeaver/vue-magnifier.git"
   },
-  "author": "",
+  "author": "Daniel Marcus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/D-Marc1/vue-magnifier/issues"
+    "url": "https://github.com/WebsiteBeaver/vue-magnifier/issues"
   },
-  "homepage": "https://github.com/D-Marc1/vue-magnifier#readme"
+  "homepage": "https://github.com/WebsiteBeaver/vue-magnifier#readme"
 }
