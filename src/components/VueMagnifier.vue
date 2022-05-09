@@ -152,15 +152,16 @@ const mgClasses = computed(() => {
 const magnifierStyles = computed(() => ({
   width: `${mgWidth}px`,
   height: `${mgHeight}px`,
-  left: `calc(${relX * 100}% - ${mgWidth / 2}px + ${mgOffsetX}px -
-${mgBorderWidth}px)`,
-  top: `calc(${relY * 100}% - ${mgHeight / 2}px +
-${mgOffsetY}px - ${mgBorderWidth}px)`,
+  left: `calc(${relX * 100}% - ${
+    mgWidth / 2
+  }px + ${mgOffsetX}px - ${mgBorderWidth}px)`,
+  top: `calc(${relY * 100}% - ${
+    mgHeight / 2
+  }px + ${mgOffsetY}px - ${mgBorderWidth}px)`,
   backgroundImage: `url(${zoomImgSrc || src})`,
-  backgroundPosition: `calc(${relX * 100}% + ${mgWidth / 2}px -
-${relX * mgWidth}px) calc(${relY * 100}% + ${mgHeight / 2}px - ${
-    relY * mgWidth
-  }px)`,
+  backgroundPosition: `calc(${relX * 100}% + ${mgWidth / 2}px - ${
+    relX * mgWidth
+  }px) calc(${relY * 100}% + ${mgHeight / 2}px - ${relY * mgWidth}px)`,
   backgroundSize: `${zoomFactor * imgBounds.width}% ${
     zoomFactor * imgBounds.height
   }%`,
