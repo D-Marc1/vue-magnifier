@@ -1,24 +1,3 @@
-<template>
-  <div :class="`vue-magnifier__magnifier ${className}`" :style="mgWrapperStyle">
-    <img
-      ref="img"
-      :src="src"
-      v-bind="$attrs"
-      class="vue-magnifier__magnifier-image"
-      :style="mgImgStyle"
-      @load="onImageLoad($event)"
-      @mouseenter="onMouseEnter()"
-      @mousemove="onMouseMove($event)"
-      @mouseout="onMouseOut()"
-      @touchstart.prevent="onTouchStart($event)"
-      @touchmove.prevent="onTouchMove($event)"
-      @touchend="onTouchEnd()"
-    />
-
-    <div v-if="imgBounds && mgShow" :class="mgClasses" :style="mgStyle" />
-  </div>
-</template>
-
 <script lang="ts">
 import { $ref } from 'vue/macros'
 import {
@@ -265,3 +244,24 @@ onUnmounted(() => {
   unRegisterEventListeners()
 })
 </script>
+
+<template>
+  <div :class="`vue-magnifier__magnifier ${className}`" :style="mgWrapperStyle">
+    <img
+      ref="img"
+      :src="src"
+      v-bind="$attrs"
+      class="vue-magnifier__magnifier-image"
+      :style="mgImgStyle"
+      @load="onImageLoad($event)"
+      @mouseenter="onMouseEnter()"
+      @mousemove="onMouseMove($event)"
+      @mouseout="onMouseOut()"
+      @touchstart.prevent="onTouchStart($event)"
+      @touchmove.prevent="onTouchMove($event)"
+      @touchend="onTouchEnd()"
+    />
+
+    <div v-if="imgBounds && mgShow" :class="mgClasses" :style="mgStyle" />
+  </div>
+</template>
