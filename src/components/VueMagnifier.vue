@@ -1,19 +1,11 @@
 <template>
-  <div
-    :class="`vue-magnifier__magnifier ${className}`"
-    :style="{
-      width,
-      height,
-      overflow: mgShowOverflow ? 'visible' : 'hidden',
-    }"
-  >
+  <div :class="`vue-magnifier__magnifier ${className}`" :style="mgWrapperStyle">
     <img
       ref="img"
       :src="src"
       v-bind="$attrs"
       class="vue-magnifier__magnifier-image"
-      style="width: 100%; height: 100%"
-      :style="mgShow ? 'cursor: none' : ''"
+      :style="mgImgStyle"
       @load="onImageLoad($event)"
       @mouseenter="onMouseEnter()"
       @mousemove="onMouseMove($event)"
@@ -23,7 +15,7 @@
       @touchend="onTouchEnd()"
     />
 
-    <div v-if="imgBounds && mgShow" :class="mgClasses" :style="mgStyles" />
+    <div v-if="imgBounds && mgShow" :class="mgClasses" :style="mgStyle" />
   </div>
 </template>
 
@@ -107,20 +99,22 @@ const props = withDefaults(defineProps<Props>(), {
 
 const {
   src,
+  width,
+  height,
   zoomImgSrc,
   zoomFactor,
   mgWidth,
   mgHeight,
   mgBorderWidth,
   mgShape,
+  mgShowOverflow,
   mgMouseOffsetX,
   mgMouseOffsetY,
   mgTouchOffsetX,
   mgTouchOffsetY,
+  mgShow,
   mgCornerBgColor,
 } = props
-
-// const emit = defineEmits(['image:load'])
 
 const emit = defineEmits<{
   (e: 'image:load', event: Event): void
@@ -145,7 +139,19 @@ const mgClasses = computed(() => {
   return classes
 })
 
-const mgStyles = computed(() => ({
+const mgWrapperStyle = computed(() => ({
+  width,
+  height,
+  overflow: mgShowOverflow ? 'visible' : 'hidden',
+}))
+
+const mgImgStyle = computed(() => ({
+  cursor: mgShow ? 'none' : '',
+  width: '100%',
+  height: '100%',
+}))
+
+const mgStyle = computed(() => ({
   width: `${mgWidth}px`,
   height: `${mgHeight}px`,
   left: `calc(${relX * 100}% - ${
