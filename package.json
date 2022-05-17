@@ -44,7 +44,7 @@
     "vite": "^2.7.13",
     "vue-tsc": "^0.31.1"
   },
-  "description": "This is a Vue 3 adpatation of [react-magnifier](https://github.com/samuelmeuli/react-magnifier), which is the original version. Someone else made a Svelte version, called [svelte-magnifier](https://github.com/supercoww/svelte-magnifier), as well.",
+  "description": "Vue 3 magnifier.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WebsiteBeaver/vue-magnifier.git"
