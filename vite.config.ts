@@ -17,6 +17,7 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
+  root: 'demo',
   build: {
     lib: {
       entry: resolve(__dirname, './src/install.ts'),
