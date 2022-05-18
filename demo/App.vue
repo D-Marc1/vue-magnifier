@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import VueMagnifier from '../src/install'
+</script>
+
 <template>
   <div style="width: 500px; height: auto">
     <VueMagnifier
@@ -6,7 +10,3 @@
     />
   </div>
 </template>
-
-<script setup lang="ts">
-import VueMagnifier from '../src/install'
-</script>
