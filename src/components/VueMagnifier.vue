@@ -167,8 +167,6 @@ const onMouseEnter = () => {
 }
 
 let onMouseMove = (e: MouseEvent) => {
-  // const { mgMouseOffsetX, mgMouseOffsetY } = props
-
   if (imgBounds) {
     const target = e.target as HTMLElement
 
@@ -185,17 +183,12 @@ const onMouseOut = () => {
 }
 
 const onTouchStart = (e: TouchEvent) => {
-  // e.preventDefault() // Prevent mouse event from being fired
-
   calcImgBounds()
 }
 
 let onTouchMove = (e: TouchEvent) => {
-  // e.preventDefault() // Disable scroll on touch
-
   if (imgBounds) {
     const target = e.target as HTMLElement
-    // const { mgTouchOffsetX, mgTouchOffsetY } = props
     const relXLocal =
       (e.targetTouches[0].clientX - imgBounds.left) / target.clientWidth
     const relYLocal =
