@@ -1,6 +1,10 @@
 # vue-magnifier
 
-[![Npm package version](https://img.shields.io/npm/v/@websitebeaver/vue-magnifier/latest.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@websitebeaver/vue-magnifier)
+<div align="center">
+
+[![Npm package version](https://img.shields.io/npm/v/@websitebeaver/vue-magnifier/latest.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@websitebeaver/vue-magnifier) [![license-image](https://img.shields.io/github/license/adonisjs/adonis-framework?style=for-the-badge)](LICENSE)
+
+</div>
 
 This is a Vue 3 adaptation of [react-magnifier](https://github.com/samuelmeuli/react-magnifier), which is the original version. Someone else made a Svelte version, called [svelte-magnifier](https://github.com/supercoww/svelte-magnifier) as well.
 
