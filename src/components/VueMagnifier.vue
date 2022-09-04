@@ -229,7 +229,7 @@ onUnmounted(() => {
       @mouseenter="onMouseEnter()"
       @mousemove="onMouseMove($event)"
       @mouseout="onMouseOut()"
-      @touchstart.prevent="onTouchStart($event)"
+      @touchstart.prevent="onTouchStart()"
       @touchmove.prevent="onTouchMove($event)"
       @touchend="onTouchEnd()"
     />
