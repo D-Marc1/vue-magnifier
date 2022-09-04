@@ -146,8 +146,10 @@ let onMouseMove = (e: MouseEvent) => {
 
     mgOffsetX = mgMouseOffsetX
     mgOffsetY = mgMouseOffsetY
+
     relX = (e.clientX - imgBounds.left) / target.clientWidth
     relY = (e.clientY - imgBounds.top) / target.clientHeight
+
     showZoom = true
   }
 }
@@ -163,6 +165,7 @@ const onTouchStart = (e: TouchEvent) => {
 let onTouchMove = (e: TouchEvent) => {
   if (imgBounds) {
     const target = e.target as HTMLElement
+
     const relXLocal =
       (e.targetTouches[0].clientX - imgBounds.left) / target.clientWidth
     const relYLocal =
@@ -172,8 +175,10 @@ let onTouchMove = (e: TouchEvent) => {
     if (relXLocal >= 0 && relYLocal >= 0 && relXLocal <= 1 && relYLocal <= 1) {
       mgOffsetX = mgTouchOffsetX
       mgOffsetY = mgTouchOffsetY
+
       relX = relXLocal
       relY = relYLocal
+
       showZoom = true
     } else {
       showZoom = false
