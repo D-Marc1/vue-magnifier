@@ -158,7 +158,7 @@ const onMouseOut = () => {
   showZoom = false
 }
 
-const onTouchStart = (e: TouchEvent) => {
+const onTouchStart = () => {
   calcImgBounds()
 }
 
