@@ -1,13 +1,6 @@
 <script lang="ts">
 import { $ref } from 'vue/macros'
-import {
-  computed,
-  defineEmits,
-  defineProps,
-  withDefaults,
-  onMounted,
-  onUnmounted,
-} from 'vue'
+import { computed, defineEmits, defineProps, onMounted, onUnmounted } from 'vue'
 
 import debounce from 'lodash.debounce'
 import throttle from 'lodash.throttle'
@@ -48,52 +41,33 @@ interface Props {
   mgCornerBgColor?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const {
   // Image
-  src: '',
-  width: '100%',
-  height: 'auto',
-  className: '',
+  src = '',
+  width = '100%',
+  height = 'auto',
+  className = '',
 
   // Zoom image
-  zoomImgSrc: '',
-  zoomFactor: 1.5,
+  zoomImgSrc = '',
+  zoomFactor = 1.5,
 
   // Magnifying glass
-  mgWidth: 150,
-  mgHeight: 150,
-  mgBorderWidth: 2,
-  mgShape: 'circle',
-  mgShowOverflow: true,
-  mgMouseOffsetX: 0,
-  mgMouseOffsetY: 0,
-  mgTouchOffsetX: -50,
-  mgTouchOffsetY: -50,
+  mgWidth = 150,
+  mgHeight = 150,
+  mgBorderWidth = 2,
+  mgShape = 'circle',
+  mgShowOverflow = true,
+  mgMouseOffsetX = 0,
+  mgMouseOffsetY = 0,
+  mgTouchOffsetX = -50,
+  mgTouchOffsetY = -50,
 
   // Custom prop to show or hide magnifying glass
-  mgShow: true,
+  mgShow = true,
   // Custom prop for magnifying glass border background color
-  mgCornerBgColor: '#fff',
-})
-
-const {
-  src,
-  width,
-  height,
-  zoomImgSrc,
-  zoomFactor,
-  mgWidth,
-  mgHeight,
-  mgBorderWidth,
-  mgShape,
-  mgShowOverflow,
-  mgMouseOffsetX,
-  mgMouseOffsetY,
-  mgTouchOffsetX,
-  mgTouchOffsetY,
-  mgShow,
-  mgCornerBgColor,
-} = props
+  mgCornerBgColor = '#fff',
+} = defineProps<Props>()
 
 const emit = defineEmits<{
   (e: 'image:load', event: Event): void
