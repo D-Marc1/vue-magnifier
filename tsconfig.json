@@ -12,7 +12,6 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "outDir": "./dist",
-    "declaration": true,
     "types": ["node"],
     "paths": {
       "@/*": ["./src/*"]
