@@ -75,7 +75,7 @@ const emit = defineEmits<{
 
 const img = $ref<HTMLImageElement>()
 
-let imgBounds = $ref<DOMRect>()
+let imgBounds = $ref<DOMRect>(new DOMRect())
 let showZoom = $ref(false)
 let mgOffsetX = $ref(0)
 let mgOffsetY = $ref(0)
