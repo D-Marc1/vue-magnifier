@@ -11,9 +11,9 @@ export default {
 </script>
 
 <script setup lang="ts">
-type MgShape = 'circle' | 'square'
+export type MgShape = 'circle' | 'square'
 
-interface Props {
+export interface Props {
   // Image
   src: string
   width?: string | number

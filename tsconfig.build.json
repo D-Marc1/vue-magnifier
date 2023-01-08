@@ -1,13 +1,7 @@
 {
-  "compilerOptions": {
-    "noEmit": false,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-  },
   "extends": "./tsconfig.json",
   "include": [
     "src/**/*.ts",
-    "**/*.d.ts",
     "src/**/*.vue",
   ],
   "exclude": [

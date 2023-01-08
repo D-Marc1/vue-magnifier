@@ -19,6 +19,7 @@ export default defineConfig({
   },
   root: 'demo',
   build: {
+    outDir: '../dist',
     lib: {
       entry: resolve(__dirname, './src/install.ts'),
       name: 'VueMagnifier',
@@ -26,7 +27,7 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['vue', '@/css/style.css'],
+      external: ['vue'],
       output: {
         globals: {
           vue: 'Vue',

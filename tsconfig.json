@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "noEmit": true,
+    "skipLibCheck": true,
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -16,5 +16,5 @@
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
 }
