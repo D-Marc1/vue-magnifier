@@ -24,13 +24,23 @@ Install the package using NPM:
 npm install @websitebeaver/vue-magnifier
 ```
 
-Add the component to your Vue application:
+Install Vue plugin in your `main.js`/`main.ts` file:
+
+```ts
+import { createApp } from 'vue'
+import VueMagnifier from '@websitebeaver/vue-magnifier'
+import App from '@/App.vue'
+
+const app = createApp(App)
+
+app.use(VueMagnifier)
+
+app.mount('#app')
+```
+
+Use `VueMagnifier` in your components:
 
 ```vue
-<script setup lang="ts">
-import VueMagnifier from '@websitebeaver/vue-magnifier'
-</script>
-
 <template>
   <VueMagnifier src="./path/to/image" width="500" />
 </template>
