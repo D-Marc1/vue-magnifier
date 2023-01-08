@@ -1,4 +1,4 @@
-import { App, Plugin } from 'vue'
+import { App } from 'vue'
 
 import VueMagnifier from '@/components/VueMagnifier.vue'
 
@@ -8,4 +8,4 @@ VueMagnifier.install = (app: App) => {
   app.component('VueMagnifier', VueMagnifier)
 }
 
-export default VueMagnifier as unknown as Plugin
+export default VueMagnifier
