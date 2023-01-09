@@ -11,3 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Issue where alias path messes up on install.ts. It is converted to relative path.
 - Issue where the proper props type for the Vue component aren't shown.
+
+## [1.0.0] - 2022-05-08
+
+Initial release.
