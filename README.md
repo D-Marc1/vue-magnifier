@@ -29,6 +29,7 @@ Add the component to your Vue application:
 ```vue
 <script setup lang="ts">
 import VueMagnifier from '@websitebeaver/vue-magnifier'
+import '@websitebeaver/vue-magnifier/styles.css'
 </script>
 
 <template>
