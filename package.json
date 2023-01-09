@@ -20,12 +20,14 @@
     "serve": "vite preview",
     "release": "release-it"
   },
+  "peerDependencies": {
+    "vue": "^3.2.26"
+  },
   "dependencies": {
     "@types/lodash.debounce": "^4.0.6",
     "@types/lodash.throttle": "^4.1.6",
     "lodash.debounce": "^4.0.8",
-    "lodash.throttle": "^4.1.1",
-    "vue": "^3.2.26"
+    "lodash.throttle": "^4.1.1"
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^3.1.0",
