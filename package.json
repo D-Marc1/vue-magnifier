@@ -7,7 +7,8 @@
     ".": {
       "import": "./dist/vue-magnifier.es.js",
       "require": "./dist/vue-magnifier.umd.js"
-    }
+    },
+    "./style": "./dist/style.css"
   },
   "types": "./dist/install.d.ts",
   "files": [
