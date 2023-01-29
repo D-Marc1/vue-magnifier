@@ -18,7 +18,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vue-tsc -p tsconfig.build.json --declaration --emitDeclarationOnly && vite build",
     "serve": "vite preview",
-    "release": "release-it"
+    "release": "release-it",
+    "install-demo": "npm --prefix ./demo i vue"
   },
   "peerDependencies": {
     "vue": "^3.2.26"
