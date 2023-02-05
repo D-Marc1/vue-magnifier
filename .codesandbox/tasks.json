@@ -2,7 +2,7 @@
   "setupTasks": [
     {
       "name": "Installing Demo Folder Dependencies",
-      "command": "npm install-demo"
+      "command": "npm run install-demo"
     }
   ]
 }
