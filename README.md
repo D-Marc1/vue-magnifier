@@ -10,7 +10,7 @@ This is a Vue 3 adaptation of [react-magnifier](https://github.com/samuelmeuli/r
 - Supports touch screens
 - Allows different files for large image and magnifying glass (e.g. thumbnail and high-resolution image)
 
-→ **[Demo](https://githubbox.com/WebsiteBeaver/vue-magnifier)**
+→ **[Demo](https://codesandbox.io/p/github/WebsiteBeaver/vue-magnifier/master)**
 
 <div style="text-align: center">
   <img src="https://raw.githubusercontent.com/WebsiteBeaver/vue-magnifier/d8cdfa26b08348a223b54105faa9c9767f15798f/images/demo.gif" alt="Demo" style="width: 600px" />
